@@ -13,7 +13,7 @@ while read line; do
             sudo apt-get purge "{$line}"
         fi
     fi
-done
+done < delete-packages.txt
 
 
 echo ""
@@ -69,43 +69,6 @@ echo ""
 echo "################################"
 echo "### Install packages ###########"
 echo "################################"
-
-## Repositories ##
-# multimedia & codecs
-sudo add-apt-repository "deb http://download.videolan.org/pub/debian/stable/ /"
-wget -O - http://download.videolan.org/pub/debian/videolan-apt.asc | sudo apt-key add -
-# touchpad-indicator
-sudo add-apt-repository ppa:atareao/atareao -y
-# ubuntu-tweak
-sudo add-apt-repository ppa:tualatrix/ppa -y
-#sudo add-apt-repository ppa:tualatrix/next -y
-# nemo icon
-sudo add-apt-repository ppa:webupd8team/nemo -y
-# themes
-sudo add-apt-repository ppa:noobslab/themes -y
-# caffeine
-sudo add-apt-repository ppa:caffeine-developers/ppa -y
-# power manager
-sudo add-apt-repository ppa:linrunner/tlp -y
-# weather indicator
-sudo add-apt-repository ppa:atareao/atareao -y
-# classic menu indicator
-sudo add-apt-repository ppa:diesch/testing -y
-# systemback
-sudo add-apt-repository ppa:nemh/systemback -y
-# Oracle Java
-sudo add-apt-repository ppa:webupd8team/java -y
-# Skype
-sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner" -y
-# Chrome
-wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
-sudo sh -c 'echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list'
-
-
-## Update & upgrade ##
-sudo apt-get update
-sudo apt-get upgrade -y
-
 
 ## Install packages ##
 # multimedia & codecs
