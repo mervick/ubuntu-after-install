@@ -16,6 +16,7 @@ while read line; do
 done < delete-packages.txt
 
 
+
 echo ""
 echo "################################"
 echo "### Add repositories ###########"
@@ -56,13 +57,17 @@ while read line; do
 done < repositories.txt
 
 
+
 echo ""
 echo "################################"
 echo "### Update & Upgrade ###########"
 echo "################################"
 
+echo "sudo apt-get update"
 sudo apt-get update
+echo "sudo apt-get upgrade -y"
 sudo apt-get upgrade -y
+
 
 
 echo ""
@@ -70,57 +75,26 @@ echo "################################"
 echo "### Install packages ###########"
 echo "################################"
 
-## Install packages ##
-# multimedia & codecs
-sudo apt-get install ubuntu-restricted-extras -y
-sudo apt-get install libavcodec-extra -y
-# touchpad-indicator
-sudo apt-get install touchpad-indicator -y
-# ubuntu-tweak
-sudo apt-get install ubuntu-tweak -y
-# unity-tweak-tool
-sudo apt-get install unity-tweak-tool -y
-# Skype
-sudo apt-get install sni-qt:i386 libdbusmenu-qt2:i386 libqt4-dbus:i386 libxss1:i386 -y
-sudo apt-get install libgtk2.0-0:i386 gtk2-engines:i386 libgconf-2-4:i386 -y
-sudo apt-get install gtk2-engines-murrine:i386 -y
-sudo apt-get install skype -y
-# flash-pugin
-sudo apt-get install flashplugin-nonfree -y
-sudo apt-get install pepperflashplugin-nonfree  -y
-# gimp
-sudo apt-get install gimp -y
-# compiz-config
-sudo apt-get install compizconfig-settings-manager compiz-plugins-extra -y
-# caffeine
-sudo apt-get install caffeine -y
-# dconf-tools
-sudo apt-get install dconf-tools -y
-# power manager
-sudo apt-get install tlp tlp-rdw -y; sudo tlp start
-# weather indicator
-sudo apt-get install my-weather-indicator -y
-# classic menu indicator
-sudo apt-get install classicmenu-indicator -y
-# systemback
-sudo apt-get install systemback -y
-# archivers
-sudo apt-get install p7zip-rar p7zip-full unace unrar zip unzip sharutils rar uudeview mpack arj cabextract file-roller-y
-# Audacious
-sudo apt-get install audacious -y
-# VLC Media Player
-sudo apt-get install vlc -y
-# Oracle Java
-sudo apt-get install oracle-java8-installer -y
-# Chrome
-sudo apt-get install google-chrome-stable -y
+while read line; do
+    if test "${#line}" -gt 0; then
+        if test "${line:0:1}" != "#"; then
+            echo "sudo apt-get install -y {$line}"
+            sudo apt-get install -y "{$line}"
+        fi
+    fi
+done < packages.txt
 
 
 
+echo ""
+echo "################################"
+echo "### Auto clear #################"
+echo "################################"
 
-
-# clear
+echo "sudo apt-get autoremove"
 sudo apt-get autoremove
+echo "sudo apt-get autoclear"
+sudo apt-get autoclear
 
 
 ## User settings ##
