@@ -1,0 +1,37 @@
+# Touchpad indicator, Weather indicator
+PPA = atareao/atareao
+
+# Ubuntu Tweak
+PPA = tualatrix/ppa
+
+# Nemo icons
+PPA = webupd8team/nemo
+
+# Noobslab themes
+PPA = noobslab/themes
+
+# Caffeine
+PPA = caffeine-developers/ppa
+
+# Power manager
+PPA = linrunner/tlp
+
+# Classic menu indicator
+PPA = diesch/testing
+
+# Systemback
+PPA = nemh/systemback
+
+# Oracle Java
+PPA = webupd8team/java
+
+# Skype
+REPO = deb http://archive.canonical.com/ $(lsb_release -sc) partner
+
+# Chrome
+KEY = https://dl-ssl.google.com/linux/linux_signing_key.pub
+SOURCE = deb http://dl.google.com/linux/chrome/deb/ stable main = google-chrome
+
+# Multimedia & Codecs
+KEY = http://download.videolan.org/pub/debian/videolan-apt.asc
+REPO = deb http://download.videolan.org/pub/debian/stable/ /
