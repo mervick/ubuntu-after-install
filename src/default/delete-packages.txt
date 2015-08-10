@@ -1,0 +1,8 @@
+# Orca Screen Reader
+gnome-orca
+
+# Zeitgeist Datahub
+zeitgeist zeitgeist-core zeitgeist-datahub
+
+# Deja dup
+deja-dup
