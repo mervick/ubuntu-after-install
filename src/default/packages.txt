@@ -1,0 +1,60 @@
+# multimedia & codecs
+ubuntu-restricted-extras libavcodec-extra
+
+# touchpad-indicator
+touchpad-indicator
+
+# ubuntu-tweak
+ubuntu-tweak
+
+# unity-tweak-tool
+unity-tweak-tool
+
+# Skype
+sni-qt:i386 libdbusmenu-qt2:i386 libqt4-dbus:i386 libxss1:i386
+libgtk2.0-0:i386 gtk2-engines:i386 libgconf-2-4:i386
+gtk2-engines-murrine:i386
+skype
+
+# flash-pugin
+flashplugin-nonfree
+pepperflashplugin-nonfree
+
+# gimp
+gimp
+
+# compiz-config
+compizconfig-settings-manager compiz-plugins-extra
+
+# caffeine
+caffeine
+
+# dconf-tools
+dconf-tools
+
+# power manager
+tlp tlp-rdw ; sudo tlp start
+
+# weather indicator
+my-weather-indicator
+
+# classic menu indicator
+classicmenu-indicator
+
+# systemback
+systemback
+
+# archivers
+p7zip-rar p7zip-full unace unrar zip unzip sharutils rar uudeview mpack arj cabextract file-roller
+
+# Audacious
+audacious
+
+# VLC Media Player
+vlc
+
+# Oracle Java
+oracle-java8-installer
+
+# Chrome
+google-chrome-stable
