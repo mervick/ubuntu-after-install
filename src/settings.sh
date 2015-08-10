@@ -1,5 +1,10 @@
 #!/bin/bash
 
+echo ""
+echo "################################"
+echo "### Configure settings #########"
+echo "################################"
+
 ## User settings ##
 # standart scrollbar
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
