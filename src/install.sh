@@ -1,6 +1,12 @@
 #!/bin/bash
 
 
+type="default"
+if test $# -gt 0; then
+    type="$1"
+fi
+
+
 echo ""
 echo "################################"
 echo "### Delete unused packages #####"
