@@ -19,7 +19,7 @@ while read line; do
             sudo apt-get purge "{$line}"
         fi
     fi
-done < delete-packages.txt
+done < "${type}/delete-packages.txt"
 
 
 
@@ -60,7 +60,7 @@ while read line; do
             fi
         fi
     fi
-done < repositories.txt
+done < "${type}/repositories.txt"
 
 
 
@@ -88,7 +88,7 @@ while read line; do
             sudo apt-get install -y "{$line}"
         fi
     fi
-done < packages.txt
+done < "${type}/packages.txt"
 
 
 
