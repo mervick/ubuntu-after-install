@@ -15,8 +15,8 @@ echo "################################"
 while read line; do
     if test "${#line}" -gt 0; then
         if test "${line:0:1}" != "#"; then
-            echo "sudo apt-get purge {$line}"
-            sudo apt-get purge "{$line}"
+            echo "sudo apt-get purge ${line}"
+            sudo apt-get purge "${line}"
         fi
     fi
 done < "${type}/delete-packages.txt"
@@ -84,8 +84,8 @@ echo "################################"
 while read line; do
     if test "${#line}" -gt 0; then
         if test "${line:0:1}" != "#"; then
-            echo "sudo apt-get install -y {$line}"
-            sudo apt-get install -y "{$line}"
+            echo "sudo apt-get install -y ${line}"
+            sudo apt-get install -y "${line}"
         fi
     fi
 done < "${type}/packages.txt"
@@ -99,6 +99,8 @@ echo "################################"
 
 echo "sudo apt-get autoremove"
 sudo apt-get autoremove
-echo "sudo apt-get autoclear"
-sudo apt-get autoclear
+echo "sudo apt-get autoclean"
+sudo apt-get autoclean
+echo "sudo apt-get clean"
+sudo apt-get clean
 
