@@ -32,9 +32,10 @@ while read line; do
     if test "${#line}" -gt 0; then
         if test "${line:0:1}" != "#"; then
             data=()
+            RELEASE="$(lsb_release -sc)"
             while IFS='=' read -ra ADDR; do
                 for i in "${ADDR[@]}"; do
-                    data+=("$(echo -e "${i}" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//')")
+                    data+=("$(echo -e "${i}" | sed -e '/\$RELEASE/$RELEASE/' | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//')")
                 done
             done <<< "$line"
 
