@@ -26,7 +26,7 @@ PPA = nemh/systemback
 PPA = webupd8team/java
 
 # Skype
-REPO = deb http://archive.canonical.com/ $RELEASE partner
+REPO = deb http://archive.canonical.com/ RELEASE partner
 
 # Chrome
 KEY = https://dl-ssl.google.com/linux/linux_signing_key.pub
