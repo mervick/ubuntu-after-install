@@ -58,3 +58,6 @@ oracle-java8-installer
 
 # Chrome
 google-chrome-stable
+
+# Shutter
+shutter
