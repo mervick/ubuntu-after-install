@@ -35,3 +35,7 @@ SOURCE = deb http://dl.google.com/linux/chrome/deb/ stable main = google-chrome
 # Multimedia & Codecs
 KEY = http://download.videolan.org/pub/debian/videolan-apt.asc
 REPO = deb http://download.videolan.org/pub/debian/stable/ /
+
+# Arc theme (works for Ubuntu >= 15.04)
+KEY = http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_$VERSION/Release.key
+SOURCE = deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_$VERSION/ / = arc-theme
