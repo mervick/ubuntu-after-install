@@ -18,9 +18,10 @@ while read line; do
         if test "${line:0:1}" != "#"; then
             data=()
             RELEASE="$(lsb_release -sc)"
+            VERSION="$(lsb_release -sr)"
             while IFS='=' read -ra ADDR; do
                 for i in "${ADDR[@]}"; do
-                    data+=("$(echo -e "${i}" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//' | sed -e 's/$RELEASE/'"${RELEASE}"'/g')")
+                    data+=("$(echo -e "${i}" | sed -e 's/^[[:space:]]*//' | sed -e 's/[[:space:]]*$//' | sed -e 's/$RELEASE/'"${RELEASE}"'/g' | sed -e 's/$VERSION/'"${VERSION}"'/g')")
                 done
             done <<< "$line"
 
