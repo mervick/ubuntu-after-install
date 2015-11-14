@@ -61,3 +61,6 @@ google-chrome-stable
 
 # Shutter
 shutter
+
+# Arc theme
+arc-theme
