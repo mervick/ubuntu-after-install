@@ -39,3 +39,6 @@ REPO = deb http://download.videolan.org/pub/debian/stable/ /
 # Arc theme (works for Ubuntu >= 15.04)
 KEY = http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_$VERSION/Release.key
 SOURCE = deb http://download.opensuse.org/repositories/home:/Horst3180/xUbuntu_$VERSION/ / = arc-theme
+
+# Gimp WebP plugin
+PPA = george-edison55/webp
