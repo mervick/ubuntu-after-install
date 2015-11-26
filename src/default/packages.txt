@@ -20,8 +20,8 @@ skype
 flashplugin-nonfree
 pepperflashplugin-nonfree
 
-# gimp
-gimp
+# Gimp, Gimp WebP plugin
+gimp gimp-webp
 
 # compiz-config
 compizconfig-settings-manager compiz-plugins-extra
